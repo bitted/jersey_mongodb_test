@@ -3,7 +3,7 @@ jersey_mongodb_test
 
 使用jersey的restfull风格架构，搭建后台接口开发的框架，使用mysql和mongodb作为db存储，采用http协议发送和接收请求，发送给客户端Json的数据格式。
 
-1、采用了项目中使用的框架原型，高效、简洁、灵活、高并发的框架模型。
+1、高效、简洁、灵活、可扩展的框架模型。
 
 2、采用的技术DB层使用mysql和mongodb两种数据源，可以采用任意一种，mysql数据源采用了ibatis作为持久层处理，CRUD操作使用ibator
 生成所需要的bean，dao，sqlmap；service和resource层需要按照业务封装一下就可以。
