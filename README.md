@@ -10,3 +10,4 @@ jersey_mongodb_test
 
 3、接口采用了jersey的注解方式，可以把service层和resource层分离，这样在以后想要扩展成为WEB项目时候，只需要添加web层显示，如spring mvc 的Controller层就可以提供web实现了，service层可以在不改变原来代码格式的情况下，提供需要的接口服务，resource层也可以正常提供给第三方提供接口服务。
 
+4、工程提供了常用的工具类Json、XML等工具类，方便转换为客户端需要的数据格式。
