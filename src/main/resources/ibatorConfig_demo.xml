@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ibatorConfiguration PUBLIC "-//Apache Software Foundation//DTD Apache iBATIS Ibator Configuration 1.0//EN" "http://ibatis.apache.org/dtd/ibator-config_1_0.dtd" >
+<ibatorConfiguration>
+	<classPathEntry
+		location="C:\Users\admin\.m2\repository\mysql\mysql-connector-java\5.0.8\mysql-connector-java-5.0.8.jar" />
+	<ibatorContext id="ibatisDemo">
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://10.5.12.61:3306/showcase4" userId="root"
+			password="lakala" />
+		<javaModelGenerator targetPackage="com.lakala.demo.beans.generated"
+			targetProject="jersey_mongodb_test">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+		<sqlMapGenerator targetPackage="com.lakala.demo.sqlmap"
+			targetProject="jersey_mongodb_test">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+
+		<daoGenerator type="GENERIC-CI" targetPackage="com.lakala.demo.dao.generated"
+			targetProject="jersey_mongodb_test">
+			<property name="enableSubPackages" value="true" />
+		</daoGenerator>
+
+		<table tableName="ss_user" schema="jersey_mongodb_test" domainObjectName="User"
+			enableSelectByExample="true"></table>
+	</ibatorContext>
+</ibatorConfiguration>
+
+		
