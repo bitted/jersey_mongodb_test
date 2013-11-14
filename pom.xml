@@ -6,9 +6,7 @@
 		<artifactId>open-parent</artifactId>
 		<version>1.0.1</version>
 	</parent>
-	<groupId>com.lakala</groupId>
 	<artifactId>jersey_mongodb_test</artifactId>
-	<version>1.0.1</version>
 	<packaging>war</packaging>
 	<name>jersey_mongodb_test</name>
 
@@ -18,7 +16,7 @@
 	</organization>
 	<properties>
 		<jetty.version>7.6.13.v20130916</jetty.version>
-		<mongo-java-driver.version>2.12.0-SNAPSHOT</mongo-java-driver.version>
+		<mongo-java-driver.version>2.12.2</mongo-java-driver.version>
 		<morphia.version>1.3.0-SNAPSHOT</morphia.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<finalName>ROOT</finalName>
@@ -28,9 +26,22 @@
 	<repositories>
 		<repository>
 			<id>public</id>
-			<url>http://10.5.12.227:8080/nexus/content/repositories/public/</url>
+			<url>http://10.127.3.190:8081/nexus/content/groups/public/</url>
 		</repository>
 	</repositories>
+	<distributionManagement>
+		<repository>
+			<id>releases</id>
+			<name>Team Nexus Release Repository</name>
+			<url>http://10.127.3.190:8081/nexus/content/repositories/releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>Team Nexus Snapshot Repository</name>
+			<url>http://10.127.3.190:8081/nexus/content/repositories/snapshots/</url>
+			<uniqueVersion>false</uniqueVersion>
+		</snapshotRepository>
+	</distributionManagement>
 
 	<dependencies>
 		<!-- spring begin -->
@@ -186,11 +197,6 @@
 			<groupId>jaxen</groupId>
 			<artifactId>jaxen</artifactId>
 			<version>1.1.4</version>
-		</dependency>
-		<dependency>
-			<groupId>org</groupId>
-			<artifactId>nuxeo-common</artifactId>
-			<version>1.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.objenesis</groupId>
